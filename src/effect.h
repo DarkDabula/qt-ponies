@@ -21,7 +21,7 @@
 #define EFFECT_H
 
 #include <QtGui/QMovie>
-#include <QtGui/QLabel>
+#include <QtWidgets/QLabel>
 #include <QMainWindow>
 #include <QVariant>
 #include <QMovie>

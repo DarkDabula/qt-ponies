@@ -21,7 +21,7 @@
 #define PONY_H
 
 #include <QtGui/QMovie>
-#include <QtGui/QLabel>
+#include <QtWidgets/QLabel>
 #include <QMainWindow>
 #include <QMouseEvent>
 #include <QHash>

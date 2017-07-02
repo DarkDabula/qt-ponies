@@ -63,10 +63,10 @@ const std::unordered_map<QString, const QVariant> ConfigWindow::config_defaults 
 static DebugWindow* log_class = nullptr;
 static bool debug = false;
 
-void handle_message(QtMsgType type, const char *msg)
+void handle_message(QtMsgType type, const QMessageLogContext &, const QString & str)
 {
     if(log_class && debug){
-        log_class->handle_message(type,msg);
+        log_class->handle_message(type,str.toStdString().c_str());
     }
 }
 
@@ -80,7 +80,7 @@ ConfigWindow::ConfigWindow(QWidget *parent) :
     ui_debug = std::unique_ptr<DebugWindow>(new DebugWindow());
     log_class = ui_debug.get();
 
-    qInstallMsgHandler(handle_message);
+    qInstallMessageHandler(handle_message);
 
 #ifndef Q_WS_X11
     // Do not show X11 specific options on other platforms

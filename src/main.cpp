@@ -17,7 +17,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include <QtGui/QApplication>
+#include <QtWidgets/QApplication>
 #include <QtCore/QLocale>
 #include <QTranslator>
 #include <QDebug>
@@ -54,8 +54,6 @@ int main(int argc, char *argv[])
     app.installTranslator(&translator);
 
     app.setQuitOnLastWindowClosed(false);
-    QTextCodec::setCodecForCStrings(QTextCodec::codecForName("UTF-8"));
-    QTextCodec::setCodecForTr(QTextCodec::codecForName("UTF-8"));
     QSettings::setDefaultFormat(QSettings::IniFormat);
 
     if ( app.isRunning() ) {
