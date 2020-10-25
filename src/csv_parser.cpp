@@ -3,18 +3,6 @@
 
 #include "csv_parser.h"
 
-namespace std
-{
-        template <>
-        struct hash<QString>
-        {
-            size_t operator()(const QString& s) const
-            {
-                return qHash(s);
-            }
-        };
-}
-
 std::unordered_map<QString, const CSVParser::ParseTypes &> CSVParser::parse_types;
 
 static QVariant convert_type(std::pair<std::string, QVariant::Type> type, QString value)

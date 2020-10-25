@@ -38,18 +38,6 @@
 
 class ConfigWindow;
 
-namespace std
-{
-        template <>
-        struct hash<QString>
-        {
-            size_t operator()(const QString& s) const
-            {
-                return qHash(s);
-            }
-        };
-}
-
 class Pony : public QMainWindow, public std::enable_shared_from_this<Pony>
 {
     Q_OBJECT
