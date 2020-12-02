@@ -3,7 +3,7 @@
 
 #include "csv_parser.h"
 
-namespace std
+/*namespace std
 {
         template <>
         struct hash<QString>
@@ -13,7 +13,7 @@ namespace std
                 return qHash(s);
             }
         };
-}
+}*/
 
 std::unordered_map<QString, const CSVParser::ParseTypes &> CSVParser::parse_types;
 

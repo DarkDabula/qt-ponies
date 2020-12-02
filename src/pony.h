@@ -38,7 +38,7 @@
 
 class ConfigWindow;
 
-namespace std
+/*namespace std
 {
         template <>
         struct hash<QString>
@@ -48,7 +48,7 @@ namespace std
                 return qHash(s);
             }
         };
-}
+}*/
 
 class Pony : public QMainWindow, public std::enable_shared_from_this<Pony>
 {
