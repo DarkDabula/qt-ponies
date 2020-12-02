@@ -52,7 +52,7 @@ Then build qt-ponies by invoking:
 Other information
 -----------------
 This is a work in progress.
-Tested on Linux amd64 3.11, Qt 4.8, g++ 4.8.2.
+Tested on Manjaro Linux x64, Qt 5.1, g++ 10.2.0.
 
 Due to case-sensitivity of filenames under Unix, all 'pony.ini' files 
 must be lower case. The case of .gif files in pony.ini must also be 
