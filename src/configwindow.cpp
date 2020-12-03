@@ -27,8 +27,6 @@
 #include <algorithm>
 #include <cmath>
 
-// This is a little bit dirty but the only way to hanlde the macro QP_DEBUG_MESSAGE within two scopes 
-#define QP_CW_SELF 1
 #include "configwindow.h"
 
 #include "ui_configwindow.h"

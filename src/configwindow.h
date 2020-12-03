@@ -39,11 +39,7 @@
 
 // Macro for debug messages
 //
-#ifdef QP_CW_SELF
-#define QP_DEBUG_MESSAGE(msg) if(getSetting<bool>(QP_SETTING_GENERAL_DEBUG)) { qDebug() << msg; }
-#else
-#define QP_DEBUG_MESSAGE(msg) if(config->getSetting<bool>(QP_SETTING_GENERAL_DEBUG)) { qDebug() << msg; }
-#endif
+#define QP_DEBUG_MESSAGE(msg) if(ConfigWindow::getSetting<bool>(QP_SETTING_GENERAL_DEBUG)) { qDebug() << msg; }
 
 // Defines to centralize setting literals 
 //
