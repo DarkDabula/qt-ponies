@@ -34,7 +34,7 @@ A precompiled binary of qt-ponies is avialable in the downloads section.
 
 Compilation
 -----------
-A compiler supporting C++11 (g++ >= 4.6, clang >= 3.1) is required, as are Qt (version = 4.8) libraries (and X11 developement libraries on X11 sytems).
+A compiler supporting C++11 (g++ >= 4.6, clang >= 3.1) is required, as are Qt (version = 5.1) libraries (and X11 developement libraries on X11 sytems).
 
 Under Debian/Ubuntu you can install the dependencies by invoking:
 
@@ -52,7 +52,7 @@ Then build qt-ponies by invoking:
 Other information
 -----------------
 This is a work in progress.
-Tested on Linux amd64 3.11, Qt 4.8, g++ 4.8.2.
+Tested on Manjaro Linux x64, Qt 5.1, g++ 10.2.0.
 
 Due to case-sensitivity of filenames under Unix, all 'pony.ini' files 
 must be lower case. The case of .gif files in pony.ini must also be 
