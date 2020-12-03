@@ -90,12 +90,12 @@ EffectInstance::EffectInstance(Effect *owner, int64_t started, bool right, QWidg
     Qt::WindowFlags windowflags = Qt::FramelessWindowHint | Qt::Tool;
 #endif
 
-    if(ConfigWindow::getSetting<bool>("general/always-on-top")) {
+    if(ConfigWindow::getSetting<bool>(QP_SETTING_GENERAL_ALWAYSONTOP)) {
         windowflags |= Qt::WindowStaysOnTopHint;
     }
 
 #ifdef Q_WS_X11
-    if(ConfigWindow::getSetting<bool>("general/bypass-wm")) {
+    if(ConfigWindow::getSetting<bool>(QP_SETTING_GENERAL_BYPASSWM)) {
         // Bypass the window manager
         windowflags |= Qt::X11BypassWindowManagerHint;
     }
@@ -144,8 +144,8 @@ EffectInstance::EffectInstance(Effect *owner, int64_t started, bool right, QWidg
 
     // Load animations and verify them
     // TODO: Do we need to change the direction of active effects? Maybe we only need to display the image for the direction at witch it was spawned.
-    animation_left = new QMovie(QString("%1/%2/%3").arg(ConfigWindow::getSetting<QString>("general/pony-directory"), owner->path, owner->image_left ));
-    animation_right = new QMovie(QString("%1/%2/%3").arg(ConfigWindow::getSetting<QString>("general/pony-directory"), owner->path, owner->image_right));
+    animation_left = new QMovie(QString("%1/%2/%3").arg(ConfigWindow::getSetting<QString>(QP_SETTING_GENERAL_PONYDIRECTORY), owner->path, owner->image_left ));
+    animation_right = new QMovie(QString("%1/%2/%3").arg(ConfigWindow::getSetting<QString>(QP_SETTING_GENERAL_PONYDIRECTORY), owner->path, owner->image_right));
 
     if(!animation_left->isValid())
         qCritical() << "Effect:"<< owner->path <<"Error opening left animation:"<< owner->image_left << "for effect:"<< owner->name;
@@ -167,7 +167,7 @@ EffectInstance::EffectInstance(Effect *owner, int64_t started, bool right, QWidg
     image_width = current_animation->currentImage().width();
     image_height = current_animation->currentImage().height();
 
-    if(ConfigWindow::getSetting<bool>("general/small-ponies")){
+    if(ConfigWindow::getSetting<bool>(QP_SETTING_GENERAL_SMALLPONIES)){
         image_width /= 2.0;
         image_height /= 2.0;
         current_animation->setScaledSize(current_animation->currentImage().size() / 2.0);
@@ -210,7 +210,7 @@ void EffectInstance::change_direction(bool right)
     image_width = current_animation->currentImage().width();
     image_height = current_animation->currentImage().height();
 
-    if(ConfigWindow::getSetting<bool>("general/small-ponies")){
+    if(ConfigWindow::getSetting<bool>(QP_SETTING_GENERAL_SMALLPONIES)){
         image_width /= 2.0;
         image_height /= 2.0;
         current_animation->setScaledSize(current_animation->currentImage().size() / 2.0);
@@ -413,10 +413,7 @@ void Effect::start()
     // Add the first effect instance
     new_instance();
 
-    if(ConfigWindow::getSetting<bool>("general/debug")) {
-        qDebug() << "Pony:"<<parent_pony->name<<"effect:"<< name <<"started.";
-    }
-
+    QP_DEBUG_MESSAGE("Pony:"<<parent_pony->name<<"effect:"<< name <<"started.")
 }
 
 void Effect::stop()
@@ -424,10 +421,7 @@ void Effect::stop()
     running = false;
     instances.clear();
 
-    if(ConfigWindow::getSetting<bool>("general/debug")) {
-        qDebug() << "Pony:"<<parent_pony->name<<"effect:"<< name <<"stoped.";
-    }
-
+    QP_DEBUG_MESSAGE("Pony:"<<parent_pony->name<<"effect:"<< name <<"stoped.")
 }
 
 void Effect::change_direction(bool right)

@@ -37,6 +37,31 @@
 #include "pony.h"
 #include "interaction.h"
 
+// Macro for debug messages
+//
+#ifdef QP_CW_SELF
+#define QP_DEBUG_MESSAGE(msg) if(getSetting<bool>(QP_SETTING_GENERAL_DEBUG)) { qDebug() << msg; }
+#else
+#define QP_DEBUG_MESSAGE(msg) if(config->getSetting<bool>(QP_SETTING_GENERAL_DEBUG)) { qDebug() << msg; }
+#endif
+
+// Defines to centralize setting literals 
+//
+#define QP_SETTING_GENERAL_ALWAYSONTOP		"general/always-on-top"
+#define QP_SETTING_GENERAL_BYPASSWM   		"general/bypass-wm"
+#define QP_SETTING_GENERAL_PONYDIRECTORY 	"general/pony-directory"
+#define QP_SETTING_GENERAL_INTERACTIONSENABLED	"general/interactions-enabled"
+#define QP_SETTING_GENERAL_EFFECTSENABLED	"general/effects-enabled"
+#define QP_SETTING_GENERAL_DEBUG		"general/debug"
+#define QP_SETTING_GENERAL_SHOWADVANCED		"general/show-advanced"
+#define QP_SETTING_GENERAL_SMALLPONIES		"general/small-ponies"
+
+#define QP_SETTING_SPEECH_ENABLED		"speech/enabled"
+#define QP_SETTING_SPEECH_PROBABILITY		"speech/probability"
+#define QP_SETTING_SPEECH_DURATION		"speech/duration"
+
+#define QP_SETTING_SOUND_ENABLED		"sound/enabled"
+
 namespace Ui {
     class ConfigWindow;
 }
@@ -90,7 +115,6 @@ public:
             return settings.value(name).value<T>();
         }
     }
-
 
 public slots:
     void remove_pony();

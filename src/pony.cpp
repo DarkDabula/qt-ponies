@@ -91,13 +91,13 @@ Pony::Pony(const QString path, ConfigWindow *config, QWidget *parent) :
     Qt::WindowFlags windowflags = Qt::FramelessWindowHint | Qt::Tool;
 #endif
 
-    always_on_top = config->getSetting<bool>("general/always-on-top");
+    always_on_top = config->getSetting<bool>(QP_SETTING_GENERAL_ALWAYSONTOP);
     if(always_on_top) {
         windowflags |= Qt::WindowStaysOnTopHint;
     }
 
 #ifdef Q_WS_X11
-    if(config->getSetting<bool>("general/bypass-wm")) {
+    if(config->getSetting<bool>(QP_SETTING_GENERAL_BYPASSWM)) {
         // Bypass the window manager
         windowflags |= Qt::X11BypassWindowManagerHint;
     }
@@ -138,7 +138,7 @@ Pony::Pony(const QString path, ConfigWindow *config, QWidget *parent) :
 
     directory = path;
 
-    QFile ifile(QString("%1/%2/pony.ini").arg(ConfigWindow::getSetting<QString>("general/pony-directory"), path));
+    QFile ifile(QString("%1/%2/pony.ini").arg(ConfigWindow::getSetting<QString>(QP_SETTING_GENERAL_PONYDIRECTORY), path));
     if(!ifile.open(QIODevice::ReadOnly | QIODevice::Text)) {
         qCritical() << "Cannot open pony.ini for pony:"<< path;
         qCritical() << ifile.errorString();
@@ -454,7 +454,8 @@ void Pony::change_behavior_to(const QString &new_behavior)
 // Used for changing to dragged/mouseover/sleeping
 void Pony::change_behavior_to(const std::vector<Behavior*> &new_behavior)
 {
-    if(new_behavior.size() > 0){
+    if(new_behavior.size() > 0)
+    {
             in_interaction = false; // We interrupted an interaction if there was one, so stop it
             interaction_delays[current_interaction] = QDateTime::currentMSecsSinceEpoch() + current_interaction_delay;
 
@@ -465,10 +466,7 @@ void Pony::change_behavior_to(const std::vector<Behavior*> &new_behavior)
             });
             current_behavior->init();
 
-            if(config->getSetting<bool>("general/debug")) {
-                    qDebug() << "Pony:"<<name<<"behavior: "<< current_behavior->name;
-            }
-
+            QP_DEBUG_MESSAGE("Pony:"<<name<<"behavior: "<< current_behavior->name);
     }
 }
 
@@ -571,10 +569,7 @@ void Pony::setup_current_behavior()
         behavior_duration = dis(gen);
     }
 
-
-    if(config->getSetting<bool>("general/debug")) {
-            qDebug() << "Pony:"<<name<<"behavior:"<< current_behavior->name <<"for" << behavior_duration << "msec";
-    }
+    QP_DEBUG_MESSAGE("Pony:"<<name<<"behavior:"<< current_behavior->name <<"for" << behavior_duration << "msec")
 
     // Update pony position (so it won't jump when we change desktops or something else unexpected happens)
     if(old_behavior != nullptr){
@@ -590,7 +585,7 @@ void Pony::setup_current_behavior()
     //    instead use the ending_line of the previous behavior if current
     //    behavior does not have a starting line
     // If ending_line is present, use that instead of choosing a new one
-    if(speak_lines.size() > 0 && config->getSetting<bool>("speech/enabled")) {
+    if(speak_lines.size() > 0 && config->getSetting<bool>(QP_SETTING_SPEECH_ENABLED)) {
         Speak* current_speech_line = nullptr;
 
         if(current_behavior->starting_line != ""){
@@ -619,7 +614,7 @@ void Pony::setup_current_behavior()
 
             std::uniform_real_distribution<> real_dis(0, 100);
             // Speak only with the specified probability
-            if((random_speak_lines.size()) > 0 && (real_dis(gen) <= config->getSetting<float>("speech/probability"))) {
+            if((random_speak_lines.size()) > 0 && (real_dis(gen) <= config->getSetting<float>(QP_SETTING_SPEECH_PROBABILITY))) {
 
                 // The speech line must in in the same group or the "any" group.
                 std::vector<Speak*> available_lines;
@@ -658,7 +653,7 @@ void Pony::setup_current_behavior()
 #endif
 
             text_label.show();
-            if(config->getSetting<bool>("sound/enabled")) {
+            if(config->getSetting<bool>(QP_SETTING_SOUND_ENABLED)) {
                 current_speech_line->play();
             }
         }
@@ -670,7 +665,7 @@ void Pony::update() {
 
     // Check for speech timeout and move text with pony
     if(text_label.isVisible() == true) {
-        if(speech_started + config->getSetting<int>("speech/duration") <= time) {
+        if(speech_started + config->getSetting<int>(QP_SETTING_SPEECH_DURATION) <= time) {
             text_label.hide();
         }else{
             text_label.move(x() + current_behavior->x_center - text_label.width()/2, y() - text_label.height());

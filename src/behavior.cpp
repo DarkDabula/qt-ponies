@@ -212,8 +212,8 @@ void Behavior::init()
     std::mt19937 gen(QDateTime::currentMSecsSinceEpoch());
 
     // Load animations and verify them
-    animations[0] = new QMovie(QString("%1/%2/%3").arg(ConfigWindow::getSetting<QString>("general/pony-directory"), path, animation_left ));
-    animations[1] = new QMovie(QString("%1/%2/%3").arg(ConfigWindow::getSetting<QString>("general/pony-directory"), path, animation_right));
+    animations[0] = new QMovie(QString("%1/%2/%3").arg(ConfigWindow::getSetting<QString>(QP_SETTING_GENERAL_PONYDIRECTORY), path, animation_left ));
+    animations[1] = new QMovie(QString("%1/%2/%3").arg(ConfigWindow::getSetting<QString>(QP_SETTING_GENERAL_PONYDIRECTORY), path, animation_right));
 
     if(!animations[0]->isValid())
         qCritical() << "Pony:"<< path <<"Error opening left animation:"<< animation_left << "for behavior:"<< name;
@@ -256,8 +256,8 @@ void Behavior::init()
                 // We are not using the animations declared for this behavior, instead we use the ones specified in follow_moving_behavior
                 delete animations[0];
                 delete animations[1];
-                animations[0] = new QMovie(QString("%1/%2/%3").arg(ConfigWindow::getSetting<QString>("general/pony-directory"), path, moving_behavior.animation_left ));
-                animations[1] = new QMovie(QString("%1/%2/%3").arg(ConfigWindow::getSetting<QString>("general/pony-directory"), path, moving_behavior.animation_right));
+                animations[0] = new QMovie(QString("%1/%2/%3").arg(ConfigWindow::getSetting<QString>(QP_SETTING_GENERAL_PONYDIRECTORY), path, moving_behavior.animation_left ));
+                animations[1] = new QMovie(QString("%1/%2/%3").arg(ConfigWindow::getSetting<QString>(QP_SETTING_GENERAL_PONYDIRECTORY), path, moving_behavior.animation_right));
 
                 // Set centers of the moving animations
                 left_image_center = moving_behavior.left_image_center;
@@ -268,8 +268,8 @@ void Behavior::init()
 
         // Find stopped behavior and get left/right filenames from it
         if(follow_stopped_behavior == ""){
-            animations[2] = new QMovie(QString("%1/%2/%3").arg(ConfigWindow::getSetting<QString>("general/pony-directory"), path, animation_left ));
-            animations[3] = new QMovie(QString("%1/%2/%3").arg(ConfigWindow::getSetting<QString>("general/pony-directory"), path, animation_right));
+            animations[2] = new QMovie(QString("%1/%2/%3").arg(ConfigWindow::getSetting<QString>(QP_SETTING_GENERAL_PONYDIRECTORY), path, animation_left ));
+            animations[3] = new QMovie(QString("%1/%2/%3").arg(ConfigWindow::getSetting<QString>(QP_SETTING_GENERAL_PONYDIRECTORY), path, animation_right));
         }else if( parent->behaviors.find(follow_stopped_behavior) == parent->behaviors.end()) {
             qCritical() << "Pony:"<<parent->name<<"follow stopped behavior:"<< follow_stopped_behavior << "from:"<< name << "not present.";
         }else{
@@ -277,8 +277,8 @@ void Behavior::init()
             if(stopped_behavior.animation_left == "") {
                 qCritical() << "Pony:"<<parent->name<<"follow stopped behavior:"<< follow_moving_behavior << "animation left from:"<< name << "not present.";
             }else{
-                animations[2] = new QMovie(QString("%1/%2/%3").arg(ConfigWindow::getSetting<QString>("general/pony-directory"), path, stopped_behavior.animation_left ));
-                animations[3] = new QMovie(QString("%1/%2/%3").arg(ConfigWindow::getSetting<QString>("general/pony-directory"), path, stopped_behavior.animation_right ));
+                animations[2] = new QMovie(QString("%1/%2/%3").arg(ConfigWindow::getSetting<QString>(QP_SETTING_GENERAL_PONYDIRECTORY), path, stopped_behavior.animation_left ));
+                animations[3] = new QMovie(QString("%1/%2/%3").arg(ConfigWindow::getSetting<QString>(QP_SETTING_GENERAL_PONYDIRECTORY), path, stopped_behavior.animation_right ));
             }
         }
     }
@@ -317,7 +317,7 @@ void Behavior::init()
     width = current_animation->currentImage().size().width();
     height = current_animation->currentImage().size().height();
 
-    if(ConfigWindow::getSetting<bool>("general/small-ponies")){
+    if(ConfigWindow::getSetting<bool>(QP_SETTING_GENERAL_SMALLPONIES)){
         x_center /= 2.0;
         y_center /= 2.0;
         width /= 2.0;
@@ -332,7 +332,7 @@ void Behavior::init()
     parent->move(parent->x_pos-x_center,parent->y_pos-y_center);
 
     // Start all effects for this behavior
-    if(ConfigWindow::getSetting<bool>("general/effects-enabled")){
+    if(ConfigWindow::getSetting<bool>(QP_SETTING_GENERAL_EFFECTSENABLED)){
         for(auto &i: parent->effects){
             if(i.second.behavior == name){
                 i.second.start();
@@ -392,7 +392,7 @@ void Behavior::change_direction(bool right, bool moving)
         y_center = left_image_center.y();
     }
 
-    if(ConfigWindow::getSetting<bool>("general/small-ponies")){
+    if(ConfigWindow::getSetting<bool>(QP_SETTING_GENERAL_SMALLPONIES)){
         x_center /= 2.0;
         y_center /= 2.0;
         width /= 2.0;
@@ -426,7 +426,7 @@ void Behavior::update()
     float real_speed = speed;
 
     // Change speed if the pony is small
-    if(ConfigWindow::getSetting<bool>("general/small-ponies")){
+    if(ConfigWindow::getSetting<bool>(QP_SETTING_GENERAL_SMALLPONIES)){
         real_speed *= .5f;
     }
 

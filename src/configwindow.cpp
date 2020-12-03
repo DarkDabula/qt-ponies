@@ -27,7 +27,10 @@
 #include <algorithm>
 #include <cmath>
 
+// This is a little bit dirty but the only way to hanlde the macro QP_DEBUG_MESSAGE within two scopes 
+#define QP_CW_SELF 1
 #include "configwindow.h"
+
 #include "ui_configwindow.h"
 #include "debugwindow.h"
 
@@ -45,19 +48,20 @@
 //	avoidance areas (vincity of the mouse cursor for example)
 //FIXME: speech enabled toggle toggles sound group visibility
 
-const std::unordered_map<QString, const QVariant> ConfigWindow::config_defaults {
-    {"general/always-on-top",        true                },
-    {"general/bypass-wm",            false               },
-    {"general/pony-directory",       "./desktop-ponies"  },
-    {"general/interactions-enabled", true                },
-    {"general/effects-enabled",      true                },
-    {"general/debug",                false               },
-    {"general/show-advanced",        false               },
-    {"general/small-ponies",         false               },
-    {"speech/enabled",               true                },
-    {"speech/probability",           50                  },
-    {"speech/duration",              2000                },
-    {"sound/enabled",                false               }
+const std::unordered_map<QString, const QVariant> ConfigWindow::config_defaults 
+{
+    {QP_SETTING_GENERAL_ALWAYSONTOP,	true},
+    {QP_SETTING_GENERAL_BYPASSWM,	false},
+    {QP_SETTING_GENERAL_PONYDIRECTORY,	"./desktop-ponies"},
+    {QP_SETTING_GENERAL_INTERACTIONSENABLED, true},
+    {QP_SETTING_GENERAL_EFFECTSENABLED,	true},
+    {QP_SETTING_GENERAL_DEBUG,		false},
+    {QP_SETTING_GENERAL_SHOWADVANCED,	false},
+    {QP_SETTING_GENERAL_SMALLPONIES,	false},
+    {QP_SETTING_SPEECH_ENABLED,		true},
+    {QP_SETTING_SPEECH_PROBABILITY,	50},
+    {QP_SETTING_SPEECH_DURATION,	2000},
+    {QP_SETTING_SOUND_ENABLED,                false}
 };
 
 static DebugWindow* log_class = nullptr;
@@ -176,7 +180,7 @@ ConfigWindow::ConfigWindow(QWidget *parent) :
     update_active_list();
 
     // Load interactions
-    QFile ifile(QString("%1/interactions.ini").arg(getSetting<QString>("general/pony-directory")));
+    QFile ifile(QString("%1/interactions.ini").arg(getSetting<QString>(QP_SETTING_GENERAL_PONYDIRECTORY)));
     if(!ifile.open(QIODevice::ReadOnly | QIODevice::Text)) {
         qCritical() << "Cannot open interactions.ini";
         qCritical() << ifile.errorString();
@@ -215,7 +219,6 @@ ConfigWindow::~ConfigWindow()
     delete list_model;
     delete action_group;
 }
-
 
 #ifdef Q_WS_X11
 // Check under what window manager we are running. We use this information to fix the window manager quirks.
@@ -334,7 +337,7 @@ void ConfigWindow::reload_available_ponies()
         ui->tabbar->removeTab(0);
     }
 
-    QDir dir(getSetting<QString>("general/pony-directory", settings) );
+    QDir dir(getSetting<QString>(QP_SETTING_GENERAL_PONYDIRECTORY, settings) );
     dir.setFilter(QDir::Dirs | QDir::NoDotAndDotDot);
 
     // Get names of all the pony directories
@@ -405,7 +408,7 @@ void ConfigWindow::update_active_list()
     active_list_model->clear();
     for(auto &i: ponies) {
 
-        QDir dir(QString("%1/%2").arg(getSetting<QString>("general/pony-directory"),i->directory));
+        QDir dir(QString("%1/%2").arg(getSetting<QString>(QP_SETTING_GENERAL_PONYDIRECTORY),i->directory));
         dir.setFilter(QDir::Dirs | QDir::NoDotAndDotDot);
 
         QStringList icon_files = dir.entryList({"*.gif"}, QDir::Files, QDir::IgnoreCase | QDir::Name);
@@ -450,7 +453,7 @@ void ConfigWindow::toggle_window(QSystemTrayIcon::ActivationReason reason)
 
 void ConfigWindow::change_ponydata_directory()
 {
-    QString new_dir = QFileDialog::getExistingDirectory(this, trUtf8("Select pony data directory"), getSetting<QString>("general/pony-directory"),
+    QString new_dir = QFileDialog::getExistingDirectory(this, trUtf8("Select pony data directory"), getSetting<QString>(QP_SETTING_GENERAL_PONYDIRECTORY),
                                                         QFileDialog::ShowDirsOnly | QFileDialog::DontResolveSymlinks );
 
     if(new_dir != "") {
@@ -463,25 +466,25 @@ void ConfigWindow::load_settings()
     QSettings settings;
 
     // General settings
-    ui->alwaysontop->setChecked(         getSetting<bool>    ("general/always-on-top",settings));
-    ui->x11_bypass_wm->setChecked(       getSetting<bool>    ("general/bypass-wm",settings));
-    ui->ponydata_directory->setText(     getSetting<QString> ("general/pony-directory",settings));
-    ui->interactions_enabled->setChecked(getSetting<bool>    ("general/interactions-enabled", settings));
-    ui->effects_enabled->setChecked     (getSetting<bool>    ("general/effects-enabled", settings));
-    ui->debug_enabled->setChecked(       getSetting<bool>    ("general/debug", settings));
-    ui->show_advanced->setChecked(       getSetting<bool>    ("general/show-advanced", settings));
-    ui->small_ponies->setChecked(        getSetting<bool>    ("general/small-ponies", settings));
+    ui->alwaysontop->setChecked(         getSetting<bool>    (QP_SETTING_GENERAL_ALWAYSONTOP,settings));
+    ui->x11_bypass_wm->setChecked(       getSetting<bool>    (QP_SETTING_GENERAL_BYPASSWM,settings));
+    ui->ponydata_directory->setText(     getSetting<QString> (QP_SETTING_GENERAL_PONYDIRECTORY,settings));
+    ui->interactions_enabled->setChecked(getSetting<bool>    (QP_SETTING_GENERAL_INTERACTIONSENABLED, settings));
+    ui->effects_enabled->setChecked     (getSetting<bool>    (QP_SETTING_GENERAL_EFFECTSENABLED, settings));
+    ui->debug_enabled->setChecked(       getSetting<bool>    (QP_SETTING_GENERAL_DEBUG, settings));
+    ui->show_advanced->setChecked(       getSetting<bool>    (QP_SETTING_GENERAL_SHOWADVANCED, settings));
+    ui->small_ponies->setChecked(        getSetting<bool>    (QP_SETTING_GENERAL_SMALLPONIES, settings));
 
 
-    debug = getSetting<bool>("general/debug", settings);
+    debug = getSetting<bool>(QP_SETTING_GENERAL_DEBUG, settings);
 
     // Speech settings
-    ui->speechenabled->setChecked(  getSetting<bool>    ("speech/enabled",settings));
-    ui->textdelay->setValue(        getSetting<int>     ("speech/duration",settings));
-    ui->speechprobability->setValue(getSetting<int>     ("speech/probability",settings));
+    ui->speechenabled->setChecked(  getSetting<bool>    (QP_SETTING_SPEECH_ENABLED,settings));
+    ui->textdelay->setValue(        getSetting<int>     (QP_SETTING_SPEECH_DURATION,settings));
+    ui->speechprobability->setValue(getSetting<int>     (QP_SETTING_SPEECH_PROBABILITY,settings));
 
     // Sound settings
-    ui->playsounds->setChecked(     getSetting<bool>    ("sound/enabled",settings));
+    ui->playsounds->setChecked(     getSetting<bool>    (QP_SETTING_SOUND_ENABLED,settings));
 
     // We do not load ponies here because we might use this function
     // to discard user made changes if user did not apply them
@@ -492,9 +495,9 @@ void ConfigWindow::save_settings()
     QSettings settings;
 
     // Check if we have to update the pony windows with new always-on-top/bypass-wm value
-    bool change_ontop = (getSetting<bool>("general/always-on-top", settings) != ui->alwaysontop->isChecked());
-    bool change_bypass_wm = (getSetting<bool>("general/bypass-wm", settings) != ui->x11_bypass_wm->isChecked());
-    bool reload_ponies = (getSetting<QString>("general/pony-directory", settings) != ui->ponydata_directory->text());
+    bool change_ontop = (getSetting<bool>(QP_SETTING_GENERAL_ALWAYSONTOP, settings) != ui->alwaysontop->isChecked());
+    bool change_bypass_wm = (getSetting<bool>(QP_SETTING_GENERAL_BYPASSWM, settings) != ui->x11_bypass_wm->isChecked());
+    bool reload_ponies = (getSetting<QString>(QP_SETTING_GENERAL_PONYDIRECTORY, settings) != ui->ponydata_directory->text());
 
     // Write the program settings
     settings.clear();
@@ -574,7 +577,7 @@ void ConfigWindow::update_distances()
 
 void ConfigWindow::update_interactions()
 {
-    if(!getSetting<bool>("general/interactions-enabled")) return;
+    if(!getSetting<bool>(QP_SETTING_GENERAL_INTERACTIONSENABLED)) return;
 
     update_distances();
 
@@ -643,9 +646,8 @@ void ConfigWindow::update_interactions()
                 interaction_targets[rnd]->current_interaction_delay = i.reactivation_delay;
                 interaction_targets[rnd]->in_interaction = true;
                 interaction_targets[rnd]->change_behavior_to(selected_behavior);
-                if(getSetting<bool>("general/debug")) {
-                    qDebug() << p->name << "interacting with" << interaction_targets[rnd]->name << "using behavior" << selected_behavior << "for interaction" << i.name;
-                }
+
+                QP_DEBUG_MESSAGE(p->name << "interacting with" << interaction_targets[rnd]->name << "using behavior" << selected_behavior << "for interaction" << i.name)
             }else{
                 // Interact with all suitable ponies
                 for(auto &t: interaction_targets) {
@@ -653,9 +655,7 @@ void ConfigWindow::update_interactions()
                     t->current_interaction_delay = i.reactivation_delay;
                     t->in_interaction = true;
                     t->change_behavior_to(selected_behavior);
-                    if(getSetting<bool>("general/debug")) {
-                        qDebug() << p->name << " interacting with " << t->name << " using " << selected_behavior << " for interaction " << i.name;
-                    }
+                    QP_DEBUG_MESSAGE(p->name << " interacting with " << t->name << " using " << selected_behavior << " for interaction " << i.name)
                 }
             }
         }

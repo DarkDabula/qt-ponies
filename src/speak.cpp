@@ -87,7 +87,7 @@ void Speak::play()
         mediaObject = new Phonon::MediaObject(this);
     }
 
-    mediaObject->setCurrentSource(ConfigWindow::getSetting<QString>("general/pony-directory") + "/" + path + "/" + soundfiles[0].toString());
+    mediaObject->setCurrentSource(ConfigWindow::getSetting<QString>(QP_SETTING_GENERAL_PONYDIRECTORY) + "/" + path + "/" + soundfiles[0].toString());
     connect(mediaObject, SIGNAL(finished()), this, SLOT(stop()));
 
     Phonon::createPath(mediaObject, audioOutput);
