@@ -4,19 +4,28 @@ qt-ponies
 Qt-ponies (pronounced 'cute-ponies') is an implementation of DesktopPonies (http://desktopponies.bugs3.com/) in Qt.
 All pony data (images, behaviors, sounds) is taken from DesktopPonies, and is compatible with it.
 
-Based of a fork by https://github.com/orangecms/qt-ponies
-of the original work of https://github.com/myszha/qt-ponies
-Inspired by qponies project by svenstaro (https://github.com/svenstaro/qponies).
+* Based of a fork by https://github.com/orangecms/qt-ponies
+* Original work of https://github.com/myszha/qt-ponies
+* Inspired by qponies project by svenstaro (https://github.com/svenstaro/qponies).
 
 Installation
 ------------
-Compile the program or download a precompiled binary from [https://github.com/myszha/qt-ponies/releases](https://github.com/myszha/qt-ponies/releases).
+No precompiled packages available yet for this fork. May come soon, or not.
 
-* Under Debian-based, you must download and install qt-ponies\_$version\_$arch.deb and qt-ponies-data\_$version\_all.deb 
-* Under Gentoo, you must download and install: qt-ponies-$version.ebuild
-* Under Under Arch Linux, use AUR: [qt-ponies-git](https://aur.archlinux.org/packages/qt-ponies-git/)
-* Under openSUSE, you must take a package from [here](http://software.opensuse.org/package/qt-ponies)
-* Under Windows, download and unpack qt-ponies-$version-win32.zip 
+Building
+--------
+A compiler supporting C++11 (g++ >= 4.6, clang >= 3.1) is required, as are Qt (version = 5.1) libraries (and X11 developement libraries on X11 sytems).
+
+Under Debian/Ubuntu you can install the dependencies by invoking:
+
+    # sudo apt-get install build-essential libx11-dev libxfixes-dev libqtcore4 libqtgui4 libqt4-dev qt4-qmake
+
+Then build qt-ponies by invoking:
+
+    # git clone https://github.com/DarkDabula/qt-ponies
+    # cd qt-ponies
+    # qmake  
+    # make  
 
 Running
 -------
@@ -29,27 +38,6 @@ the appliacation from this menu.
 
 Right clicking on a pony brings up its context menu, where you can put that
 pony to sleep, remove it, or remove all instances of that pony.
-
-Running under Windows
--------
-A precompiled binary of qt-ponies is avialable in the downloads section.
-
-Compilation
------------
-A compiler supporting C++11 (g++ >= 4.6, clang >= 3.1) is required, as are Qt (version = 5.1) libraries (and X11 developement libraries on X11 sytems).
-
-Under Debian/Ubuntu you can install the dependencies by invoking:
-
-    # sudo apt-get install build-essential libx11-dev libxfixes-dev libqtcore4 libqtgui4 libqt4-dev qt4-qmake
-
-Then build qt-ponies by invoking:
-
-    # git clone https://github.com/myszha/qt-ponies/
-    # cd qt-ponies
-    # qmake  
-    # make  
-
-**Or** you can use a precompiled Debian/Ubuntu package for i386 and amd64, available in downloads.
 
 Other information
 -----------------
