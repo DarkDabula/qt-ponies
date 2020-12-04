@@ -152,7 +152,7 @@ ConfigWindow::ConfigWindow(QWidget *parent) :
     connect(ui->available_list->selectionModel(), SIGNAL(currentChanged(QModelIndex,QModelIndex)), this, SLOT(newpony_list_changed(QModelIndex)));
 
     // Start update timer
-    update_timer.setInterval(30);
+    update_timer.setInterval(60); // Doubled to compensate of the doubled pony speed
     update_timer.start();
 
     interaction_timer.setInterval(500);

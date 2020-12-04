@@ -423,12 +423,10 @@ void Behavior::update()
 
     QRect screen = QApplication::desktop()->availableGeometry(parent);
 
-    float real_speed = speed;
-
-    // Change speed if the pony is small
-    if(ConfigWindow::getSetting<bool>(QP_SETTING_GENERAL_SMALLPONIES)){
-        real_speed *= .5f;
-    }
+    // Small change here, we have to double the speed becaus of pones with speed 1 and when "small ponies" is active
+    // In exchange the duration of each tick is increased too.
+    // 
+    float real_speed = (!ConfigWindow::getSetting<bool>(QP_SETTING_GENERAL_SMALLPONIES)) ? speed*2 : speed;
 
     // If we are moving to a destanation point, calculate direction and move there
     if(state == State::Following  || state == State::MovingToPoint) {
@@ -528,19 +526,25 @@ void Behavior::update()
 
     // Update posiotion depending on movement type
     if(movement == Movement::Horizontal){
+    	QP_DEBUG_MESSAGE(parent->name << " is moving horizontally from " << parent->x_pos << " to " << (parent->x_pos + vel_x))
         parent->x_pos += vel_x;
     }
     if(movement == Movement::Vertical){
+    	QP_DEBUG_MESSAGE(parent->name << " is moving vertically from " << parent->y_pos << " to " << (parent->y_pos + vel_y))
         parent->y_pos += vel_y;
     }
     if(movement == Movement::Diagonal){
         vel_x = real_speed * std::cos(angle);
         vel_y = -real_speed * std::sin(angle);
+    	QP_DEBUG_MESSAGE(parent->name << " is moving diagonally from (x/y) " << parent->x_pos << "/" << parent->y_pos << " to (x/y) " << (parent->x_pos+vel_x) << "/" << (parent->y_pos+vel_y))
         parent->x_pos += vel_x;
         parent->y_pos += vel_y;
     }
+    	
+    QP_DEBUG_MESSAGE(parent->name << " will move (x/y) " << (int)(parent->x_pos-x_center) << "/" << (int)(parent->y_pos-y_center))
 
-    parent->move(parent->x_pos-x_center,parent->y_pos-y_center);
+	// We need to round or the pony will be moving to the left faster tan to the right
+	parent->move(round(parent->x_pos-x_center),round(parent->y_pos-y_center));
 
 }
 
