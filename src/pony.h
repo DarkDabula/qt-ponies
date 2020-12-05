@@ -25,6 +25,7 @@
 #include <QMainWindow>
 #include <QMouseEvent>
 #include <QHash>
+#include <QTimer>
 
 #include <string>
 #include <unordered_map>
@@ -63,6 +64,7 @@ public:
     void set_on_top(bool top);
     void set_bypass_wm(bool bypass);
     std::shared_ptr<Pony> get_shared_ptr();
+    void adjust_update_timer(float);
 
     float x_pos;
     float y_pos;
@@ -122,6 +124,8 @@ private:
     bool always_on_top;
     int current_group;
 
+    // pony has its own timer now
+    QTimer update_timer;
 };
 
 inline std::basic_ostream<char>& operator<<(std::basic_ostream<char>& os, const QString& str) {

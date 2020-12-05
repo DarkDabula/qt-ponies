@@ -243,6 +243,11 @@ Pony::Pony(const QString path, ConfigWindow *config, QWidget *parent) :
         }
     }
 
+    // Initialize and assign update timer
+    update_timer.setInterval(60); 
+    update_timer.start();
+    QObject::connect(&update_timer, SIGNAL(timeout()), this, SLOT(update()));
+
     current_behavior = nullptr;
     change_behavior();
     this->show();
@@ -275,6 +280,11 @@ void Pony::set_bypass_wm(bool bypass)
 
     set_on_top(always_on_top);
 
+}
+
+void Pony::adjust_update_timer(float p_factor)
+{
+	update_timer.setInterval(60*p_factor); 
 }
 
 void Pony::set_on_top(bool top)

@@ -151,10 +151,6 @@ ConfigWindow::ConfigWindow(QWidget *parent) :
 
     connect(ui->available_list->selectionModel(), SIGNAL(currentChanged(QModelIndex,QModelIndex)), this, SLOT(newpony_list_changed(QModelIndex)));
 
-    // Start update timer
-    update_timer.setInterval(60); // Doubled to compensate of the doubled pony speed
-    update_timer.start();
-
     interaction_timer.setInterval(500);
     interaction_timer.start();
 
@@ -167,7 +163,6 @@ ConfigWindow::ConfigWindow(QWidget *parent) :
         settings.setArrayIndex(i);
         try {
             ponies.emplace_back(std::make_shared<Pony>(settings.value("name").toString(), this));
-            QObject::connect(&update_timer, SIGNAL(timeout()), ponies.back().get(), SLOT(update()));
         }catch (std::exception &e) {
             qCritical() << "Could not load pony" << settings.value("name").toString();
         }
@@ -389,7 +384,6 @@ void ConfigWindow::add_pony()
         try {
             // Try to initialize the new pony at the end of the active pony list and connect it to the update timer
             ponies.emplace_back(std::make_shared<Pony>(i.data().toString(), this));
-            QObject::connect(&update_timer, SIGNAL(timeout()), ponies.back().get(), SLOT(update()));
 
         }catch (std::exception &e) {
             qCritical() << "Could not load pony" << name;

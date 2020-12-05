@@ -86,7 +86,6 @@ public:
 
 
     std::list<std::shared_ptr<Pony>> ponies;
-    QTimer update_timer;
     QTimer interaction_timer;
 
 #ifdef Q_WS_X11

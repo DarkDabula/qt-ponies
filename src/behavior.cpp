@@ -423,10 +423,12 @@ void Behavior::update()
 
     QRect screen = QApplication::desktop()->availableGeometry(parent);
 
-    // Small change here, we have to double the speed becaus of pones with speed 1 and when "small ponies" is active
-    // In exchange the duration of each tick is increased too.
+    // Here begins the magic. At nomal size, ponies get their speed doubled to prevent speeds below 1 when at small size.
+    // To compensate this an get smooth movement, the pony uopdate time will modified, so each tick moves the pony by 1 pixel.
     // 
     float real_speed = (!ConfigWindow::getSetting<bool>(QP_SETTING_GENERAL_SMALLPONIES)) ? speed*2 : speed;
+    parent->adjust_update_timer(1/real_speed);
+    real_speed = 1.0;
 
     // If we are moving to a destanation point, calculate direction and move there
     if(state == State::Following  || state == State::MovingToPoint) {
