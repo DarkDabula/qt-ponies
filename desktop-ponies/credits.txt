@@ -36,6 +36,7 @@ You may also be interested in the [deviantART group for Desktop Ponies](http://d
 * [Asparagus](http://asparagusunited.deviantart.com/)
 * Azure Fang
 * [Blackfeathr](http://blackfeathr.deviantart.com/)
+* [Blaze5565](http://blaze5565.deviantart.com/)
 * [Bot-chan](http://botchan-mlp.deviantart.com/)
 * [CANDYBAG](http://auraion.deviantart.com/)
 * [DeathPony (DeathPwny)](http://deathpwny.deviantart.com/)
@@ -91,6 +92,9 @@ Contributors are broken down by character. If there was more than one contributo
 #### Ace
 * Bot-chan
 
+#### Adagio Dazzle
+* Bot-chan
+
 #### Ahuizotl
 * Bot-chan
 
@@ -121,7 +125,7 @@ Contributors are broken down by character. If there was more than one contributo
 #### Applejack
 * Jay Wright [Stand, Trotcycle]
 * RJP! [Gallop, Rear]
-* Bot-chan [Idle, Trot, Pose, Lasso, AJGallop, AJRear, Crystal]
+* Bot-chan [Idle, Trot, Pose, Lasso, AJGallop, AJRear, Crystal, Breezie, Banjo, Drag]
 * StarStep [Gala, Sleep, Conga, Lasso2, Hurdle]
 * Anonycat [Truck]
 * DesktopPonyGuy [Apple]
@@ -133,8 +137,17 @@ Contributors are broken down by character. If there was more than one contributo
 #### Archer
 * vulcan539
 
+#### Aria Blaze
+* Bot-chan
+
+#### Aunt Orange
+* Bot-chan
+
 #### Babs Seed
 * Anonycat
+
+#### Beauty Shock
+* Bot-chan
 
 #### Beauty Brass
 * asluc96
@@ -145,6 +158,9 @@ Contributors are broken down by character. If there was more than one contributo
 * Azure Fang [SitBerry, Sleep]
 * Bot-chan [Drink]
 
+#### Biff
+* Bot-chan
+
 #### Big Mac
 * Anonycat [Stand]
 * StarStep [Stand, Trot, Buck, Sleep]
@@ -152,8 +168,8 @@ Contributors are broken down by character. If there was more than one contributo
 #### Big McIntosh
 * Bot-chan
 
-#### Blinkie Pie
-* Anonycat
+#### Bittersweet
+* Bot-chan
 
 #### Blossomforth
 * fanofetcetera
@@ -168,6 +184,9 @@ Contributors are broken down by character. If there was more than one contributo
 * Starly [Sleep]
 * Bot-chan [Idle, Bench]
 
+#### Bow Hothoof
+* Bot-chan
+
 #### Boxxy Brown
 * Bot-chan
 
@@ -175,6 +194,9 @@ Contributors are broken down by character. If there was more than one contributo
 * Anonycat
 
 #### Bulk Biceps
+* Bot-chan
+
+#### Button Mash
 * Bot-chan
 
 #### Caesar
@@ -192,10 +214,29 @@ Contributors are broken down by character. If there was more than one contributo
 * Pony Noia [Blink, Chomp, SpawningCarrot, Tv]
 * StarStep [Banner, BannerRaise]
 * Anonycat [Banner]
+* Bot-chan [Nuzzle]
 
 #### Changeling
 * Bot-chan
 * (Refer to credits for each of the mane 6 for borrowed animations)
+
+#### Changeling (Lv2) #1
+* Bot-chan
+
+#### Changeling (Lv2) #2
+* Bot-chan
+
+#### Changeling (Lv2) #3
+* Bot-chan
+
+#### Changeling (Lv2) #4
+* Bot-chan
+
+#### Changeling (Lv2) #5
+* Bot-chan
+
+#### Changeling (Lv2) #6
+* Bot-chan
 
 #### Cheerilee
 * humle
@@ -213,22 +254,29 @@ Contributors are broken down by character. If there was more than one contributo
 * Azure Fang [Sleep]
 * Bot-chan [Pilot, Balloon]
 
+#### Cloakseller
+* Pony Noia
+
 #### Cloud Kicker
 * Tyranico
 
 #### Cloudchaser
 * fanofetcetera
 
-#### Clyde Pie
+#### Cloudy Quartz
 * Anonycat
 
 #### Coco Pommel
 * StarStep
 
-#### Colgate
-* RJP! [Stand, Walk, Stretch, Brush]
-* vulcan539 [Sit]
-* Anonymous [Sit]
+#### Countess Coloratura (Rara)
+* Blaze5565
+
+#### Coriander Cumin
+* Bot-chan
+
+#### Cranky Doodle Donkey
+* Bot-chan
 
 #### Daisy
 * Anonycat
@@ -236,6 +284,7 @@ Contributors are broken down by character. If there was more than one contributo
 #### Daring Do
 * Anonymous [Stand, Trot, Fly]
 * StarStep [Fly]
+* Bot-chan [Gallop]
 
 #### Davenport
 * Anonycat
@@ -261,6 +310,9 @@ Contributors are broken down by character. If there was more than one contributo
 #### Discord
 * StarStep
 
+#### Doctor Horse
+* Bot-chan
+
 #### Doctor Whooves
 * Asparagus [Stand, Trot]
 * RJP! [Stand, Trot]
@@ -277,10 +329,13 @@ Contributors are broken down by character. If there was more than one contributo
 #### Donut Joe
 * Bot-chan
 
+#### Double Diamond
+* Bot-chan
+
 #### Dr. Caballeron
 * Bot-chan
 
-#### Dude
+#### Dumb-Bell
 * Bot-chan
 
 #### Elsie
@@ -301,6 +356,9 @@ Contributors are broken down by character. If there was more than one contributo
 #### Filthy Rich
 * kjhf
 
+#### Fire Soul
+* Bot-chan
+
 #### Flam
 * Bot-chan
 
@@ -319,6 +377,12 @@ Contributors are broken down by character. If there was more than one contributo
 #### Flitter
 * fanofetcetera
 
+#### Flurry Heart
+* Bot-chan
+
+#### Flutterbat
+* Bot-chan
+
 #### Fluttershy
 * Jay Wright [Stand, Trot, Fly]
 * humle [GalaStand, GalaTrot, GalaFly]
@@ -327,13 +391,16 @@ Contributors are broken down by character. If there was more than one contributo
 * Ponyluver [Sleep]
 * Asparagus [Sleep]
 * Half-n-Half [Gallop]
-* Bot-chan [Crystal]
+* Bot-chan [Crystal, Breezie]
 
 #### Fluttershy (Filly)
 * PsychoShutin
 
-#### Fredrick Horeshoepin
+#### Frederic Horseshoepin
 * vulcan539
+
+#### Fresh Coat
+* Bot-chan
 
 #### Gilda
 * Bot-chan
@@ -341,10 +408,25 @@ Contributors are broken down by character. If there was more than one contributo
 #### Ginger Snap
 * Bot-chan
 
+#### Gizmo
+* Bot-chan
+
+#### Goldie Delicious
+* Bot-chan
+
 #### Grace Manewitz
 * Pony Noia
 
+#### Grampa Gruff
+* Bot-chan
+
 #### Granny Smith
+* Bot-chan
+
+#### Granny Smith (Teenager)
+* Bot-chan
+
+#### Greta
 * Bot-chan
 
 #### Gummy
@@ -354,25 +436,49 @@ Contributors are broken down by character. If there was more than one contributo
 #### Gustave
 * Bot-chan
 
+#### Gustysnows
+* Bot-chan
+
 #### Hayseed Turnip Truck
 * Anonycat
 
 #### Hoity-Toity
 * Pony Noia
 
+#### Hoops
+* Bot-chan
+
 #### Horte Cuisine
 * Anonycat
 
-#### Inky Pie
+#### Igneous Rock
 * Anonycat
 
 #### Iron Will
 * StarStep
 
+#### Jasmine Leaf
+* Blaze5565
+
+#### Jeff Letrotski
+* Bot-chan
+
+#### Jesús Pezuña
+* Anonycat
+
 #### King Sombra
 * Bot-chan
 
+#### King Thorax
+* Bot-chan
+
 #### Lady Justice
+* Bot-chan
+
+#### Laid-back Mule
+* Bot-chan
+
+#### Leadwing
 * Bot-chan
 
 #### Lemon Hearts
@@ -388,6 +494,15 @@ Contributors are broken down by character. If there was more than one contributo
 #### Lily
 * Bot-chan
 
+#### Lily Longsocks
+* Anonycat
+
+#### Limestone Pie
+* Bot-chan
+
+#### Limestone Pie (Filly)
+* Anonycat
+
 #### Little Strongheart
 * Pony Noia
 
@@ -397,19 +512,61 @@ Contributors are broken down by character. If there was more than one contributo
 #### Lyra
 * Starly [Stand, Walk, Sit, Sleep, Jump]
 * Anonymous [Stand, Walk]
-* Bot-chan [BenchBig]
+* Bot-chan [BenchBig, Lyre]
 
 #### Mane-iac
+* Bot-chan
+
+#### Mane-iac Henchpony 1
+* Bot-chan
+
+#### Mane-iac Henchpony 2
+* Bot-chan
+
+#### Mane-iac Henchpony 3
+* Bot-chan
+
+#### Mane-iac Henchpony 4
+* Bot-chan
+
+#### Mane-iac Henchpony 5
 * Bot-chan
 
 #### Manticore
 * Bot-chan
 
+#### Marble Pie
+* Bot-chan
+
+#### Marble Pie (Filly)
+* Anonycat
+
+#### Matilda
+* Bot-chan
+
+#### Maud Pie
+* Anonycat [Idle, Walk]
+* Bot-chan [Idle, Walk, Lying, Boulder]
+
+#### Maud Pie (Filly)
+* Bot-chan
+
 #### Mayor Mare
 * Anonycat
 
+#### Minuette
+* RJP! [Stand, Walk, Stretch, Brush]
+* vulcan539 [Sit]
+* Anonymous [Sit]
+
 #### Mjolna
 * Anonymous
+
+#### Moondancer
+* Bot-chan
+
+#### Moonlight Raven
+* Bot-chan
 
 #### Mr Breezy
 * Anonycat
@@ -421,7 +578,13 @@ Contributors are broken down by character. If there was more than one contributo
 #### Mr Greenhooves
 * Anonycat
 
+#### Mr Shy
+* Bot-chan
+
 #### Mrs Cake
+* Bot-chan
+
+#### Mrs Shy
 * Bot-chan
 
 #### Mrs Sparkle
@@ -439,18 +602,41 @@ Contributors are broken down by character. If there was more than one contributo
 * DrZoin [FlyFast, Magic, Teleport]
 * Bot-chan [Gallop]
 
+#### Neon Lights
+* Bot-chan
+
+#### Nerdy Delegate
+* Bot-chan
+
+#### Night Glider
+* Bot-chan
+
+#### Night Light
+* Bot-chan
+
 #### Nightmare Moon
-* Yamino
+* Yamino [Stand, Walk]
+* Bot-chan [Stand, Walk, Fly]
 * Images modified from Princess Celestia.
 
 #### Nurse Redheart
 * Logan [Trot]
 * StarStep [Idle]
+* Bot-chan [Idle, Idle2, Trot]
 
 #### Nurse Snowheart
 * Bot-chan
 
 #### Nurse Sweetheart
+* Bot-chan
+
+#### Nurse Tenderheart
+* Bot-chan
+
+#### Nursery Rhyme
+* Bot-chan
+
+#### Ocellus
 * Bot-chan
 
 #### Octavia
@@ -465,8 +651,14 @@ Contributors are broken down by character. If there was more than one contributo
 #### Parasprite
 * Bot-chan
 
-#### Jesús Pezuña
-* Anonycat
+#### Parcel Post
+* Bot-chan
+
+#### Party Favor
+* Bot-chan
+
+#### Pear Butter
+* emeralddarkness
 
 #### Perfect Pace
 * Anonycat
@@ -488,7 +680,7 @@ Contributors are broken down by character. If there was more than one contributo
 * humle [GalaIdle, GalaTrot, GalaBounce]
 * sidekick ponyguy [Fly]
 * StarStep [Conga]
-* Bot-chan [Crystal]
+* Bot-chan [Crystal, Breezie, Sleep, Dance]
 
 #### Pinkie Pie (Filly)
 * PsychoShutin
@@ -496,8 +688,14 @@ Contributors are broken down by character. If there was more than one contributo
 #### Pipsqueak
 * StarStep
 
+# Plaid Stripes
+* Bot-chan
+
 #### Pokey Pierce
 * Anonycat
+
+#### Police Pony
+* Bot-chan
 
 #### Pound Cake
 * Bot-chan
@@ -508,10 +706,10 @@ Contributors are broken down by character. If there was more than one contributo
 #### PP Hum Drum
 * Bot-chan
 
-#### PP Masked Matterhorn
+#### PP Masked Matter-Horn
 * Bot-chan
 
-#### PP Mistress Marevelous
+#### PP Mistress Mare-velous
 * Bot-chan
 
 #### PP Radiance
@@ -528,7 +726,7 @@ Contributors are broken down by character. If there was more than one contributo
 
 #### Princess Cadance
 * emeralddarkness [Stand]
-* Bot-chan [Walk, Flight]
+* Bot-chan [Walk, Flight, Dance]
 
 #### Princess Cadence (Teenager)
 * Klopp
@@ -543,6 +741,9 @@ Contributors are broken down by character. If there was more than one contributo
 
 #### Princess Celestia (Filly)
 * Asparagus
+
+#### Princess Ember
+* Bot-chan
 
 #### Princess Luna
 * Bot-chan
@@ -566,12 +767,18 @@ Contributors are broken down by character. If there was more than one contributo
 #### Queen Chrysalis
 * Bot-chan
 
+#### Quiet Gestures
+* Bot-chan
+
+#### Rainbow Blaze
+* Bot-chan
+
 #### Rainbow Dash
 * Jay Wright [Stand, Trot, TrotWing, Hover, Fly, FlyZoom]
 * StarStep [Conga, Gala, Salute, Dash]
 * SarkInABox [Dash]
 * fanofetcetera [Motivate]
-* Bot-chan [Drag]
+* Bot-chan [Drag, Breezie, Swim]
 * Felix-0 [Beep]
 * DrZoin [Dizzy]
 * supersaiyanmikito [Crysallized]
@@ -595,9 +802,10 @@ Contributors are broken down by character. If there was more than one contributo
 * Jay Wright [Stand, Trot, Horn, Fly]
 * Anonymous [Fly]
 * StarStep [Conga, Ponder, Fashion]
-* Bot-chan [DramaCouch, FarmerIdle, FarmerTrot, FarmerScratch, Fly1, Fly2, Drag, DragC, Crystal]
+* Bot-chan [DramaCouch, FarmerIdle, FarmerTrot, FarmerScratch, Fly1, Fly2, Drag, DragC, Crystal, Breezie]
 * The Coop [Gala, Tantrum, Ponder, DramaCouch, Sleep]
 * Miriam the Bat [Sleep]
+* Pony Noia [OhPleaseBehave]
 
 #### Rarity (Filly)
 * RJP!
@@ -611,6 +819,9 @@ Contributors are broken down by character. If there was more than one contributo
 #### Raven
 * Bot-chan
 
+#### Rogue
+* Bot-chan
+
 #### Roseluck
 * Anonymous
 
@@ -618,7 +829,8 @@ Contributors are broken down by character. If there was more than one contributo
 * Pony Noia
 
 #### Royal Guard
-* StarStep
+* StarStep [Stand, Trot, Fly]
+* Bot-chan [Stand, Idle1]
 
 #### Royal Night Guard
 * Bot-chan
@@ -629,6 +841,9 @@ Contributors are broken down by character. If there was more than one contributo
 #### Rumble
 * fanofetcetera
 
+#### Saffron Masala
+* Bot-chan
+
 #### Sapphire Shores
 * Pony Noia
 
@@ -637,6 +852,9 @@ Contributors are broken down by character. If there was more than one contributo
 * RainbowCrash [Stand]
 * The Coop [Skip]
 * Bot-chan [Fly, Gallop]
+
+#### Score
+* Bot-chan
 
 #### Screw Loose
 * Bot-chan
@@ -671,6 +889,9 @@ Contributors are broken down by character. If there was more than one contributo
 #### Shopkeeper
 * Bot-chan
 
+#### Silver Shill
+* Bot-chan
+
 #### Silver Spoon
 * Anonycat
 
@@ -684,6 +905,12 @@ Contributors are broken down by character. If there was more than one contributo
 * Anonycat
 
 #### Slendermane
+* Bot-chan
+
+#### Smolder
+* Bot-chan
+
+#### Smooze
 * Bot-chan
 
 #### Snails
@@ -700,9 +927,21 @@ Contributors are broken down by character. If there was more than one contributo
 #### Soigne Folio
 * Pony Noia
 
+#### Sonata Dusk
+* Bot-chan
+
+#### Songbird Serenade
+* Bot-chan
+
+#### Sourpuss
+* Bot-chan
+
 #### Sparkler
 * vulcan539 [Stand, Walk, Jump, Sit, Sleep, Stand]
 * Images modified from Lyra.
+
+#### Sphinx
+* Bot-chan
 
 #### Spike
 * Peter Kurucz (Fantos) [Idle, Run]
@@ -714,8 +953,17 @@ Contributors are broken down by character. If there was more than one contributo
 * Rainbowdutch [Stand, Trot, Fly, Goggles, SuitlessStand, SuitlessTrot, SuitlessFly]
 * Bot-chan [Smoke, Dash, SuitlessStand, SuitlessTrot, SuitlessFly]
 
+#### Spoiled Rich
+* Bot-chan
+
 #### Spot
 * Pony Noia
+
+#### Starlight Glimmer
+* Bot-chan
+
+#### Starlight Glimmer (Season 5)
+* Bot-chan
 
 #### Stella
 * Pony Noia
@@ -726,10 +974,19 @@ Contributors are broken down by character. If there was more than one contributo
 #### Steven Magnet
 * StarStep
 
-#### Sue Pie
-* Anonycat
+#### Stormy Flare
+* Bot-chan
+
+#### Sugar Belle
+* Bot-chan
+
+#### Sunburst
+* Bot-chan
 
 #### Sunset Shimmer
+* Bot-chan
+
+#### Sunshine Smiles
 * Bot-chan
 
 #### Suri Polomare
@@ -737,7 +994,10 @@ Contributors are broken down by character. If there was more than one contributo
 
 #### Surprise
 * DeathPony [Stand, Trotcycle, Backtrack, Fly, Fly2, Hummingbird, TongueDance]
-* Bot-chan [SuitIdle, SuitTrot, SuitFly, SuitFastFly, Smoke]
+* Bot-chan [SuitIdle, SuitTrot, SuitFly, SuitFastFly, Smoke, Change]
+
+#### Svengallop
+* Anonycat
 
 #### Sweetie Belle
 * Midnyte [Stand, Walk, Fly, Sit, Look]
@@ -749,10 +1009,28 @@ Contributors are broken down by character. If there was more than one contributo
 #### Tank
 * Bot-chan
 
+#### Tealove
+* Bot-chan
+
+#### Tempest Shadow
+* Bot-chan
+
+#### Thunderclap
+* Bot-chan
+
 #### Thunderlane
 * fanofetcetera
 
 #### Tirek
+* Bot-chan
+
+#### Toe-Tapper
+* Bot-chan
+
+#### Torch Song
+* Bot-chan
+
+#### Tree Hugger
 * Bot-chan
 
 #### Trenderhoof
@@ -763,6 +1041,12 @@ Contributors are broken down by character. If there was more than one contributo
 * humle [Fireworks]
 * Starly [NakedStand, NakedTrot]
 * Bot-chan [Flowers]
+
+#### Trouble Shoes
+* Bot-chan
+
+#### Truffle Shuffle
+* Bot-chan
 
 #### Twilight Sparkle
 * Jay Wright [Stand, Trot]
@@ -796,15 +1080,33 @@ Contributors are broken down by character. If there was more than one contributo
 #### Walter
 * Bot-chan
 
+#### Whoa Nelly
+* Bot-chan
+
 #### Wild Fire
 * Bot-chan
 
 #### Winona
 * DeathPony
 
+#### Withers
+* Bot-chan
+
+#### Written Script
+* Bot-chan
+
 #### Zecora
 * sidekick ponyguy [Stand, Trot]
 * RJP! [Stand, Trot, Balance, Dig]
+
+#### Zephyr Breeze
+* Bot-chan
+
+#### Zipporwhill
+* Bot-chan
+
+#### Zipporwhill's Father
+* Bot-chan
 
 ### Houses
 
@@ -813,6 +1115,9 @@ Contributors are broken down by character. If there was more than one contributo
 
 #### HomeStead
 * StarStep
+
+#### Ponyville Library
+* StepStep
 
 #### Section 8
 * Half-n-Half
